@@ -13,14 +13,15 @@ const Carousel = ({ slides }) => {
 
   useEffect(() => {
     if (windowSize.width > 1440) {
-      setPostsPerSlide(4);
-    } else if (windowSize.width > 1024) {
-      setPostsPerSlide(3);
-    } else if (windowSize.width > 640) {
-      setPostsPerSlide(2);
-    } else {
-      setPostsPerSlide(1);
+      return setPostsPerSlide(4);
     }
+    if (windowSize.width > 1024) {
+      return setPostsPerSlide(3);
+    }
+    if (windowSize.width > 640) {
+      return setPostsPerSlide(2);
+    }
+    return setPostsPerSlide(1);
   }, [windowSize]);
 
   const moveToRight = () => {
