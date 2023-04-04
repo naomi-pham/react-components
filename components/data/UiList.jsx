@@ -1,7 +1,5 @@
-import Carousel from "../carousel";
-import CarouselWithText from "../carousel/CarouselWithText";
+import { Carousel, CarouselWithText } from "../carousel";
 import { slides } from "./slides";
-
 
 const UiList = [
   {
