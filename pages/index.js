@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className="min-h-screen bg-slate-50 p-4 text-slate-800 sm:p-6 space-y-6">
         {UiList.map((ui) => (
-          <div key={ui.id} className="space-y-2">
+          <div key={ui.id} className="space-y-6">
             <h3 className="text-3xl font-semibold">{ui.label}</h3>
             <div>{ui.component}</div>
           </div>
