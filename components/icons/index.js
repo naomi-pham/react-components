@@ -22,11 +22,26 @@ export const IconCheck = ({ size = 24 }) => {
       width={size}
       height={size}
     >
-       <path
-    d="M10.0007 15.1709L19.1931 5.97852L20.6073 7.39273L10.0007 17.9993L3.63672 11.6354L5.05093 10.2212L10.0007 15.1709Z"
-    fill="currentColor"
-  ></path>
+      <path
+        d="M10.0007 15.1709L19.1931 5.97852L20.6073 7.39273L10.0007 17.9993L3.63672 11.6354L5.05093 10.2212L10.0007 15.1709Z"
+        fill="currentColor"
+      ></path>
     </svg>
   );
 };
 
+export const IconArrow = ({ size = 24 }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+    >
+      <path
+        d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  );
+};

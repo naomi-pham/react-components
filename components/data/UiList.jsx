@@ -1,4 +1,5 @@
 import { Carousel, CarouselWithText } from "../carousel";
+import { Filter } from "../filter";
 import { Stepper } from "../stepper";
 import { slides } from "./slides";
 
@@ -17,6 +18,11 @@ const UiList = [
     id: 2,
     label: "Stepper",
     component: <Stepper />,
+  },
+  {
+    id: 3,
+    label: "Filter",
+    component: <Filter />,
   },
 ];
 
