@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { throttle } from "../utils/throttle";
 import useWindowResize from "../@hooks/useWindowResize";
-import { IconChevron } from "../icons";
+import { IconChevron } from "../icons/Icons";
 import CarouselCard from "../@ui/CarouselCard";
 
 const Carousel = ({ slides }) => {

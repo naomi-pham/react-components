@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IconCheck } from "../icons";
+import { IconCheck } from "../icons/Icons";
 
 const Stepper = () => {
   const steps = [1, 2, 3, 4];
