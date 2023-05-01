@@ -1,6 +1,11 @@
 import { AccordionComponent } from "../accordion";
 import AccordionMenu from "../accordion/AccordionMenu";
-import { Carousel, CarouselWithText, FramerCarousel } from "../carousel";
+import {
+  Carousel,
+  CarouselWithText,
+  FramerCarousel,
+  FramerImageCarousel,
+} from "../carousel";
 import { Select } from "../select";
 import { Stepper } from "../stepper";
 import { slides } from "./carouselData";
@@ -23,21 +28,26 @@ const componentList = [
   },
   {
     id: 3,
+    label: "Framer image carousel",
+    component: <FramerImageCarousel />,
+  },
+  {
+    id: 4,
     label: "Stepper",
     component: <Stepper />,
   },
   {
-    id: 4,
+    id: 5,
     label: "Select",
     component: <Select />,
   },
   {
-    id: 5,
+    id: 6,
     label: "Accordion",
     component: <AccordionComponent />,
   },
   {
-    id: 6,
+    id: 7,
     label: "Accordion menu",
     component: <AccordionMenu />,
   },

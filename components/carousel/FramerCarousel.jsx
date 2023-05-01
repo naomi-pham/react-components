@@ -6,7 +6,6 @@ import { IconChevron } from "../icons/Icons";
 
 const FramerCarousel = () => {
   const [step, setStep] = useState(0);
-  console.log("🚀 ~ file: FramerCarousel.jsx:9 ~ FramerCarousel ~ step:", step);
   const [direction, setDirection] = useState(1);
   const [isAnimating, setIsAnimating] = useState();
 
@@ -16,13 +15,13 @@ const FramerCarousel = () => {
       opacity: 0,
       scale: 1.2,
     }),
-    middle: { x: "0%", opacity: 1, scale: 1 },
-    end: (direction) => ({ x: `-${100 * direction}%`, opacity: 0, scale: 1 }),
+    middle: { x: 0, opacity: 1, scale: 1 },
+    exit: (direction) => ({
+      x: `-${100 * direction}%`,
+      opacity: 0.2,
+      scale: 1,
+    }),
   };
-
-  // const renderByStep = () => {
-  //   return <CarouselCard item={slides[step]} />;
-  // };
 
   const moveToRight = () => {
     enableAnimation();
@@ -56,7 +55,7 @@ const FramerCarousel = () => {
       <MotionConfig
         transition={{ duration: 1, ease: [0.56, 0.03, 0.12, 1.04] }}
       >
-        <div className="mx-16 overflow-hidden">
+        <div className="z-0 mx-16 overflow-hidden">
           <AnimatePresence
             initial={false}
             mode="popLayout"
@@ -78,14 +77,14 @@ const FramerCarousel = () => {
       </MotionConfig>
 
       <button
-        className="absolute top-1/2 left-0 z-10 h-full w-10 -translate-y-1/2 rotate-180 px-2 text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
+        className="absolute top-1/2 left-0 z-20 h-full w-10 -translate-y-1/2 rotate-180 px-2 text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
         onClick={moveToLeft}
       >
         <IconChevron />
       </button>
 
       <button
-        className="absolute top-1/2 right-0 z-10 h-full w-10 -translate-y-1/2 px-2 text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
+        className="absolute top-1/2 right-0 z-20 h-full w-10 -translate-y-1/2 px-2 text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
         onClick={moveToRight}
       >
         <IconChevron />
