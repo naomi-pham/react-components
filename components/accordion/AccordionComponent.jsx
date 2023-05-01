@@ -3,7 +3,7 @@ import Accordion from "./Accordion";
 import accordionData from "../data/accordionData";
 
 const AccordionComponent = () => {
-  const [openKey, setOpenKey] = useState();
+  const [openKey, setOpenKey] = useState(0);
 
   const handleToggle = (key) => () => {
     setOpenKey(openKey !== key ? key : null);

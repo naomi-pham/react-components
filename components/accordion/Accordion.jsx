@@ -21,13 +21,13 @@ const Accordion = ({ item, handleToggle, open }) => {
 
   return (
     <div
-      className={`min-w-[280px] max-w-2xl shadow-sm overflow-hidden border-l-4 border-slate-100 bg-rose-50 ${renderBackgroundById(
-        item?.id
+      className={`min-w-[280px] max-w-2xl overflow-hidden border-l-4 shadow-sm ${renderBackgroundById(
+        item.id
       )}`}
     >
       <button
-        className="flex w-full items-center gap-4 p-4 text-2xl text-slate-700 font-medium"
-        onClick={handleToggle(item?.id)}
+        className="flex w-full items-center gap-4 p-4 text-2xl font-medium text-slate-700"
+        onClick={handleToggle(item.id)}
       >
         <div className={`${!open && "-rotate-45"} transition-all duration-200`}>
           <i>
