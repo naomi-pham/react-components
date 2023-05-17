@@ -6,6 +6,12 @@ import {
   FramerCarousel,
   FramerImageCarousel,
 } from "../carousel";
+import {
+  ExitAnimation,
+  FollowPointer,
+  Gestures,
+  StaggerChildren,
+} from "../framer";
 import { Select } from "../select";
 import { Stepper } from "../stepper";
 import { slides } from "./carouselData";
@@ -28,26 +34,46 @@ const componentList = [
   },
   {
     id: 3,
+    label: "Framer carousel",
+    component: <FollowPointer />,
+  },
+  {
+    id: 4,
+    label: "Framer carousel",
+    component: <Gestures />,
+  },
+  {
+    id: 5,
+    label: "Framer carousel",
+    component: <StaggerChildren />,
+  },
+  {
+    id: 6,
+    label: "Framer carousel",
+    component: <ExitAnimation />,
+  },
+  {
+    id: 7,
     label: "Framer image carousel",
     component: <FramerImageCarousel />,
   },
   {
-    id: 4,
+    id: 8,
     label: "Stepper",
     component: <Stepper />,
   },
   {
-    id: 5,
+    id: 9,
     label: "Select",
     component: <Select />,
   },
   {
-    id: 6,
+    id: 10,
     label: "Accordion",
     component: <AccordionComponent />,
   },
   {
-    id: 7,
+    id: 11,
     label: "Accordion menu",
     component: <AccordionMenu />,
   },
