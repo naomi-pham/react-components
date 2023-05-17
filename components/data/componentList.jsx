@@ -14,9 +14,15 @@ import {
 } from "../framer";
 import { Select } from "../select";
 import { Stepper } from "../stepper";
+import { Toggle } from "../toggle";
 import { slides } from "./carouselData";
 
 const componentList = [
+  {
+    id: 12,
+    label: "Toggle",
+    component: <Toggle />,
+  },
   {
     id: 0,
     label: "Carousel",

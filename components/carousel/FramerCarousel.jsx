@@ -6,8 +6,8 @@ import { IconChevron } from "../icons/Icons";
 
 const FramerCarousel = () => {
   const [step, setStep] = useState(0);
-  const [direction, setDirection] = useState(1);
-  const [isAnimating, setIsAnimating] = useState();
+  const [direction, setDirection] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const carouselVariants = {
     enter: (direction) => ({
