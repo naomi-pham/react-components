@@ -19,7 +19,7 @@ body {
 }
 
 .border-linear-gradient {
-  border: 2px;
+  border: inset solid 2px transparent;
   border-image:
     linear-gradient(to right,
       rgba(0, 0, 0, 0.05),
