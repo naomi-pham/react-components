@@ -1,0 +1,42 @@
+{
+  "extends": ["next/core-web-vitals", "eslint:recommended", "next", "prettier"],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "linebreak-style": "off",
+    "react/prop-types": "off",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".js", ".jsx", ".json"]
+      }
+    ],
+    "react/destructuring-assignment": [
+      "error",
+      "always",
+      { "ignoreClassFields": true }
+    ],
+    "react/prefer-stateless-function": [
+      "off",
+      { "ignorePureComponents": true }
+    ],
+    "react/button-has-type": "warn",
+    "no-irregular-whitespace": "error",
+    "no-tabs": "error",
+    "no-unused-vars": "warn",
+    "consistent-return": "warn",
+    "max-lines": "warn",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-array-index-key": "warn",
+    "react/display-name": "off"
+  }
+}
