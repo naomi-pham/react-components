@@ -121,7 +121,7 @@ const Toggle = () => {
           {/* Toggle button hidden */}
           <motion.button
             onClick={isNight ? handleSetDay : handleSetNight}
-            className="absolute top-0 bottom-0 left-2 z-50 h-full w-[52px] -translate-y-1/2 bg-transparent"
+            className="absolute left-2 top-1 z-50 h-[52px] w-[52px] rounded-full bg-transparent focus:outline-none"
             initial={false}
             animate={{ x }}
             transition={{ type: "spring", duration: 1.2, ease: "easeInOut" }}
