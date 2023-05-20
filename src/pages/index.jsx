@@ -17,43 +17,64 @@ export default function Home() {
 
       <main className="flex max-h-screen min-h-screen overflow-y-scroll bg-light-neutral-50 text-branding-secondary-600">
         <Tab.Group vertical className="flex w-full" as="div">
-          <Tab.List className="min-w-[270px] rounded-r-[40px] bg-light-neutral-50 p-1 px-6 py-10 shadow-button-lg">
-            <div className="flex flex-col gap-6">
-              {componentList.map((item) => (
-                <Tab as={Fragment} key={item.id}>
-                  {({ selected }) => (
-                    <motion.div
-                      className={`rounded-full p-1 focus:outline-none ${
-                        selected ? 'shadow-custom-button' : ''
-                      }`}
-                    >
-                      <button
-                        type="button"
-                        className={`inline-flex w-full gap-2 rounded-full px-4 py-3 text-left text-body-2 font-semibold text-branding-secondary-400 focus:outline-none focus:ring-offset-2 ${
-                          selected
-                            ? 'border-linear-gradient bg-light-neutral-50 shadow-container-inner-md text-light-error-500'
-                            : ''
+          <Tab.List>
+            <motion.div
+              className="h-full min-w-[270px] rounded-r-2xl bg-light-neutral-50 p-1 px-6 py-10 shadow-button-lg"
+              initial={{ opacity: 0, translateX: -300 }}
+              animate={{ opacity: 1, translateX: 0 }}
+              transition={{
+                type: 'spring',
+                bounce: 0,
+                duration: 0.3,
+                ease: 'easeInOut',
+              }}
+            >
+              <div className="flex flex-col gap-6">
+                {componentList.map((item) => (
+                  <Tab as={Fragment} key={item.id}>
+                    {({ selected }) => (
+                      <motion.div
+                        className={`rounded-full p-1 focus:outline-none ${
+                          selected ? 'shadow-custom-button' : ''
                         }`}
                       >
-                        <i>
-                          <IconStar />
-                        </i>
-                        {item.label}
-                      </button>
-                    </motion.div>
-                  )}
-                </Tab>
-              ))}
-            </div>
+                        <button
+                          type="button"
+                          className={`inline-flex w-full gap-2 rounded-full px-4 py-3 text-left text-body-2 font-semibold text-branding-secondary-400 focus:outline-none focus:ring-offset-2 ${
+                            selected
+                              ? 'border-linear-gradient bg-light-neutral-50 text-light-error-500 shadow-container-inner-md'
+                              : ''
+                          }`}
+                        >
+                          <i>
+                            <IconStar />
+                          </i>
+                          {item.label}
+                        </button>
+                      </motion.div>
+                    )}
+                  </Tab>
+                ))}
+              </div>
+            </motion.div>
           </Tab.List>
 
           <Tab.Panels className="flex w-full flex-col gap-6 overflow-scroll p-10 ">
             {componentList.map((item) => (
-              <Tab.Panel key={item.id} className="space-y-8">
-                <h3 className="text-heading-3 font-semibold text-branding-secondary-600">
-                  {item.label}
-                </h3>
-                <div className="flex-1">{item.component}</div>
+              <Tab.Panel key={item.id}>
+                <motion.div
+                  key={item.id}
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -10, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="space-y-8"
+                >
+                  <h3 className="text-heading-3 font-semibold text-branding-secondary-600">
+                    {item.label}
+                  </h3>
+                  <div className="flex-1">{item.component}</div>
+                </motion.div>
               </Tab.Panel>
             ))}
           </Tab.Panels>
