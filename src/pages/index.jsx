@@ -31,7 +31,7 @@ export default function Home() {
                         type="button"
                         className={`inline-flex w-full gap-2 rounded-full px-4 py-3 text-left text-body-2 font-semibold text-branding-secondary-400 focus:outline-none focus:ring-offset-2 ${
                           selected
-                            ? 'border-linear-gradient bg-light-neutral-50 shadow-container-inner-md'
+                            ? 'border-linear-gradient bg-light-neutral-50 shadow-container-inner-md text-light-error-500'
                             : ''
                         }`}
                       >
