@@ -1,4 +1,4 @@
-import { IconBack, IconBell, IconStar } from 'components/common/Icons'
+import { IconBack, IconStar } from 'components/common/Icons'
 import Link from 'next/link'
 
 const Nav = () => {
