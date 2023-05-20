@@ -1,4 +1,7 @@
+import { Tab } from '@headlessui/react'
+import { IconStar } from 'components/common/Icons'
 import Head from 'next/head'
+import { Fragment } from 'react'
 import componentList from 'src/data/componentList'
 
 export default function Home() {
@@ -11,13 +14,45 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="min-h-screen space-y-10 bg-slate-50 p-4 text-slate-800 sm:p-6">
-        {componentList.map((ui) => (
-          <div key={ui.id} className="space-y-4">
-            <h3 className="text-3xl font-semibold">{ui.label}</h3>
-            <div>{ui.component}</div>
-          </div>
-        ))}
+      <main className="flex max-h-screen min-h-screen overflow-y-scroll bg-light-neutral-300 text-branding-secondary-600">
+        <Tab.Group vertical className="flex w-full" as="div">
+          <Tab.List className="m-4 min-w-[260px] rounded-2xl bg-light-neutral-50 p-1 shadow-button-md">
+            <div className="h-full rounded-2xl bg-light-neutral-300 p-10 shadow-container-inner-md">
+              <div className="flex flex-col gap-6">
+                {componentList.map((item) => (
+                  <Tab as={Fragment} key={item.id}>
+                    {({ selected }) => (
+                      <button
+                        type="button"
+                        className={`w-full rounded-full inline-flex gap-2 px-4 py-3 text-left text-body-2 font-semibold text-branding-secondary-500 focus:outline-none focus:ring-offset-2 ${
+                          selected
+                            ? 'border-linear-gradient bg-light-neutral-50 shadow-button-lg'
+                            : ''
+                        }`}
+                      >
+                        <i>
+                          <IconStar />
+                        </i>
+                        {item.label}
+                      </button>
+                    )}
+                  </Tab>
+                ))}
+              </div>
+            </div>
+          </Tab.List>
+
+          <Tab.Panels className="flex flex-col gap-6 p-10 w-full overflow-scroll ">
+            {componentList.map((item) => (
+              <Tab.Panel key={item.id} className="space-y-8">
+                <h3 className="text-heading-3 font-semibold text-branding-secondary-600">
+                  {item.label}
+                </h3>
+                <div className="flex-1">{item.component}</div>
+              </Tab.Panel>
+            ))}
+          </Tab.Panels>
+        </Tab.Group>
       </main>
     </>
   )

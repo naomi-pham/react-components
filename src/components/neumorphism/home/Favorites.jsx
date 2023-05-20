@@ -26,7 +26,7 @@ const Favorites = () => {
 
   return (
     <div className="space-y-6">
-      <h3 className="text-title-3 font-semibold text-light-neutral-800">
+      <h3 className="text-title-1 font-semibold text-light-neutral-800">
         Favorites
       </h3>
       <div className="flex gap-5 overflow-x-auto px-1 pb-4">

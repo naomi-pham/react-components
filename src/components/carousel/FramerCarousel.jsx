@@ -51,9 +51,9 @@ const FramerCarousel = () => {
   }
 
   return (
-    <div className="relative max-w-3xl">
+    <div className="relative max-w-3xl overflow-hidden">
       <MotionConfig
-        transition={{ duration: 1, ease: [0.56, 0.03, 0.12, 1.04] }}
+        transition={{ duration: 0.65, ease: [0.56, 0.03, 0.12, 1.04] }}
       >
         <div className="z-0 mx-16 overflow-hidden">
           <AnimatePresence
@@ -69,6 +69,7 @@ const FramerCarousel = () => {
               exit="exit"
               custom={direction}
               variants={carouselVariants}
+              className="overflow-hidden"
             >
               <CarouselCard item={slides[step]} />
             </motion.div>
@@ -78,7 +79,7 @@ const FramerCarousel = () => {
 
       <button
         type="button"
-        className="absolute top-1/2 left-0 z-20 h-full w-10 -translate-y-1/2 rotate-180 px-2 text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
+        className="absolute left-0 top-1/2 z-20 h-full w-10 -translate-y-1/2 rotate-180 px-2 text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
         onClick={moveToLeft}
       >
         <IconChevron />
@@ -86,7 +87,7 @@ const FramerCarousel = () => {
 
       <button
         type="button"
-        className="absolute top-1/2 right-0 z-20 h-full w-10 -translate-y-1/2 px-2 text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
+        className="absolute right-0 top-1/2 z-20 h-full w-10 -translate-y-1/2 px-2 text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
         onClick={moveToRight}
       >
         <IconChevron />

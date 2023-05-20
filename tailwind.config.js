@@ -5,18 +5,28 @@ module.exports = {
   content: ['./src/**/*.{html,js,jsx}'],
   theme: {
     colors: {
+      branding: {
+        secondary: {
+          400: '#728AB7',
+          500: '#596E95',
+          600: '#415273',
+          700: '#2B3951',
+        },
+      },
       light: {
         neutral: {
           25: '#FFFFFF',
           50: '#F0F0F3',
           100: '#C3C9CD',
           200: '#E3E6E8',
+          300: '#EEEEEE',
           600: '#A3ADB2',
           700: '#677278',
           800: '#292E30',
           900: '#231F20',
         },
         link: {
+          400: '#728AB7',
           500: '#1990FF',
         },
         success: {
@@ -79,6 +89,14 @@ module.exports = {
           'inset 5px 5px 4px rgba(174, 174, 192, 0.2), inset -5px -5px 4px rgba(255, 255, 255, 0.3)',
         'custom-button':
           '-5px -5px 5px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(174, 174, 192, 0.2), inset -2px -2px 4px rgba(0, 0, 0, 0.1), inset 2px 2px 4px #FFFFFF',
+        'button-md':
+          '-1px -1px 3px #FFFFFF, 1.5px 1.5px 3px rgba(174, 174, 192, 0.4)',
+        'container-inner-md':
+          'inset -1px -1px 1px rgba(255, 255, 255, 0.7), inset 1px 1px 2px rgba(174, 174, 192, 0.2)',
+        'button-lg':
+          '-2.17893px -2.17893px 6.5368px #FFFFFF, 2.17893px 2.17893px 6.5368px rgba(174, 174, 192, 0.4)',
+        'border-md':
+          '-1px -1px 3px #FFFFFF, 1.5px 1.5px 3px rgba(174, 174, 192, 0.4)',
         ...defaultTheme.boxShadow,
       },
       dropShadow: {

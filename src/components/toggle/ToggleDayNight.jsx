@@ -9,7 +9,7 @@ import night from '/public/images/toggle/night.png'
 import plane from '/public/images/toggle/plane.png'
 import sun from '/public/images/toggle/sun.png'
 
-const Toggle = () => {
+const ToggleDayNight = () => {
   const [x, setX] = useState(0)
   const [y, setY] = useState(0)
   const [z, setZ] = useState({ x: 0, y: 0 })
@@ -132,4 +132,4 @@ const Toggle = () => {
   )
 }
 
-export default Toggle
+export default ToggleDayNight

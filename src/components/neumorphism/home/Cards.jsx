@@ -7,7 +7,7 @@ const Cards = () => {
   return (
     <div className="space-y-6">
       <div className="flex gap-2 text-light-neutral-800">
-        <h3 className="text-title-3 font-semibold">Cards</h3>
+        <h3 className="text-title-1 font-semibold">Cards</h3>
         <div className="rounded-xl bg-light-neutral-200 px-3 py-[2px] text-body-2">
           6
         </div>
