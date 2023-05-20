@@ -14,19 +14,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex max-h-screen min-h-screen overflow-y-scroll bg-light-neutral-300 text-branding-secondary-600">
+      <main className="flex max-h-screen min-h-screen overflow-y-scroll bg-light-neutral-50 text-branding-secondary-600">
         <Tab.Group vertical className="flex w-full" as="div">
-          <Tab.List className="m-4 min-w-[260px] rounded-2xl bg-light-neutral-50 p-1 shadow-button-md">
-            <div className="h-full rounded-2xl bg-light-neutral-300 p-10 shadow-container-inner-md">
-              <div className="flex flex-col gap-6">
-                {componentList.map((item) => (
-                  <Tab as={Fragment} key={item.id}>
-                    {({ selected }) => (
+          <Tab.List className="min-w-[270px] rounded-[40px] bg-light-neutral-50 p-1 px-6 py-10 shadow-button-lg">
+            <div className="flex flex-col gap-6">
+              {componentList.map((item) => (
+                <Tab as={Fragment} key={item.id}>
+                  {({ selected }) => (
+                    <div
+                      className={`rounded-full p-1 focus:outline-none ${
+                        selected ? 'shadow-custom-button' : ''
+                      }`}
+                    >
                       <button
                         type="button"
-                        className={`w-full rounded-full inline-flex gap-2 px-4 py-3 text-left text-body-2 font-semibold text-branding-secondary-500 focus:outline-none focus:ring-offset-2 ${
+                        className={`inline-flex w-full gap-2 rounded-full px-4 py-3 text-left text-body-2 font-semibold text-branding-secondary-500 focus:outline-none focus:ring-offset-2 ${
                           selected
-                            ? 'border-linear-gradient bg-light-neutral-50 shadow-button-lg'
+                            ? 'border-linear-gradient bg-light-neutral-50 shadow-container-inner-md'
                             : ''
                         }`}
                       >
@@ -35,14 +39,14 @@ export default function Home() {
                         </i>
                         {item.label}
                       </button>
-                    )}
-                  </Tab>
-                ))}
-              </div>
+                    </div>
+                  )}
+                </Tab>
+              ))}
             </div>
           </Tab.List>
 
-          <Tab.Panels className="flex flex-col gap-6 p-10 w-full overflow-scroll ">
+          <Tab.Panels className="flex w-full flex-col gap-6 overflow-scroll p-10 ">
             {componentList.map((item) => (
               <Tab.Panel key={item.id} className="space-y-8">
                 <h3 className="text-heading-3 font-semibold text-branding-secondary-600">
