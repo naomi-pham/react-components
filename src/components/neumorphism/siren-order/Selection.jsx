@@ -1,7 +1,19 @@
-import { IconAdd, IconCart, IconCheck, IconFire, IconIce, IconMinus } from 'components/common/Icons'
-import React from 'react'
+import Counter from 'components/common/Counter'
+import { IconCart, IconCheck, IconFire, IconIce } from 'components/common/Icons'
+import { useCallback, useState } from 'react'
 
 const Selection = () => {
+
+  const [count, setCount] = useState(1)
+
+  const increment = useCallback(() => {
+    setCount(count + 1)
+  }, [count])
+
+  const decrement = useCallback(() => {
+    setCount(count - 1)
+  }, [count])
+
   return (
     <section className="flex flex-col gap-5">
       {/* Price */}
@@ -9,30 +21,14 @@ const Selection = () => {
         <p className="flex items-start gap-2">
           <span>$</span>
           <span className="leading-0 text-title-1 font-semibold text-light-neutral-800">
-            4.65
+           {( count * 4.65).toFixed(2)}
           </span>
         </p>
-        <div className="border-linear-gradient flex items-center justify-between rounded-full bg-light-neutral-50 p-1 shadow-inner-sm">
-          <button
-            type="button"
-            className="border-linear-gradient flex aspect-square w-[42px] items-center justify-center rounded-full bg-light-neutral-50 text-light-neutral-600 shadow-custom-button"
-          >
-            <IconMinus />
-          </button>
-          <span className="px-[27.5px] text-body-2 text-light-neutral-800">
-            1
-          </span>
-          <button
-            type="button"
-            className="border-linear-gradient flex aspect-square w-[42px] items-center justify-center rounded-full bg-light-neutral-50 text-light-neutral-600 shadow-custom-button"
-          >
-            <IconAdd />
-          </button>
-        </div>
+        <Counter count={count} increment={increment} decrement={decrement} />
       </div>
 
       {/* Hot or cold */}
-      <div className="border-linear-gradient flex rounded-full p-1 shadow-inner-sm">
+      <div className="border-linear-gradient flex rounded-full p-1 shadow-custom-inner-sm">
         <button
           type="button"
           className="flex w-1/2 items-center justify-center gap-[6px] rounded-full p-4 text-body-2 font-semibold text-light-error-400 shadow-custom-button"
@@ -54,7 +50,7 @@ const Selection = () => {
       </div>
 
       {/* Size */}
-      <div className="border-linear-gradient grid grid-cols-4 rounded-full p-1 shadow-inner-sm">
+      <div className="border-linear-gradient grid grid-cols-4 rounded-full p-1 shadow-custom-inner-sm">
         <button
           type="button"
           className="flex items-center justify-center gap-[6px] rounded-full p-4 text-body-2 font-semibold text-light-neutral-600"

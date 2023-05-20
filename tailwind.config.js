@@ -75,7 +75,7 @@ module.exports = {
           '-10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.5)',
         'custom-sm':
           '-5px -5px 20px #FFFFFF, 5px 5px 20px rgba(174, 174, 192, 0.5)',
-        'inner-sm':
+        'custom-inner-sm':
           'inset 5px 5px 4px rgba(174, 174, 192, 0.2), inset -5px -5px 4px rgba(255, 255, 255, 0.3)',
         'custom-button':
           '-5px -5px 5px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(174, 174, 192, 0.2), inset -2px -2px 4px rgba(0, 0, 0, 0.1), inset 2px 2px 4px #FFFFFF',

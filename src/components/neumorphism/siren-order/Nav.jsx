@@ -7,7 +7,7 @@ const Nav = () => {
       <Link href="/neumorphism">
         <button
           type="button"
-          className="border-linear-gradient flex h-10 w-10 items-center justify-center rounded-full bg-light-neutral-50 text-light-neutral-600 shadow-custom-button"
+          className="border-linear-gradient flex h-10 w-10 items-center justify-center rounded-full bg-light-neutral-50 text-light-neutral-600 shadow-custom-button hover:shadow-custom-inner-sm"
         >
           <i>
             <IconBack />
@@ -19,7 +19,7 @@ const Nav = () => {
       </p>
       <button
         type="button"
-        className="border-linear-gradient relative flex h-10 w-10 items-center justify-center rounded-full bg-light-neutral-50 text-light-neutral-600 shadow-custom-button"
+        className="border-linear-gradient relative flex h-10 w-10 items-center justify-center rounded-full bg-light-neutral-50 text-light-neutral-600 shadow-custom-button hover:shadow-custom-inner-sm"
       >
         <i className='text-light-pending-400'>
           <IconStar />
