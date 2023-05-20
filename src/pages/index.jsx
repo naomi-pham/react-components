@@ -1,5 +1,6 @@
 import { Tab } from '@headlessui/react'
 import { IconStar } from 'components/common/Icons'
+import { motion } from 'framer-motion'
 import Head from 'next/head'
 import { Fragment } from 'react'
 import componentList from 'src/data/componentList'
@@ -16,19 +17,19 @@ export default function Home() {
 
       <main className="flex max-h-screen min-h-screen overflow-y-scroll bg-light-neutral-50 text-branding-secondary-600">
         <Tab.Group vertical className="flex w-full" as="div">
-          <Tab.List className="min-w-[270px] rounded-[40px] bg-light-neutral-50 p-1 px-6 py-10 shadow-button-lg">
+          <Tab.List className="min-w-[270px] rounded-r-[40px] bg-light-neutral-50 p-1 px-6 py-10 shadow-button-lg">
             <div className="flex flex-col gap-6">
               {componentList.map((item) => (
                 <Tab as={Fragment} key={item.id}>
                   {({ selected }) => (
-                    <div
+                    <motion.div
                       className={`rounded-full p-1 focus:outline-none ${
                         selected ? 'shadow-custom-button' : ''
                       }`}
                     >
                       <button
                         type="button"
-                        className={`inline-flex w-full gap-2 rounded-full px-4 py-3 text-left text-body-2 font-semibold text-branding-secondary-500 focus:outline-none focus:ring-offset-2 ${
+                        className={`inline-flex w-full gap-2 rounded-full px-4 py-3 text-left text-body-2 font-semibold text-branding-secondary-400 focus:outline-none focus:ring-offset-2 ${
                           selected
                             ? 'border-linear-gradient bg-light-neutral-50 shadow-container-inner-md'
                             : ''
@@ -39,7 +40,7 @@ export default function Home() {
                         </i>
                         {item.label}
                       </button>
-                    </div>
+                    </motion.div>
                   )}
                 </Tab>
               ))}
