@@ -25,3 +25,7 @@ body {
       rgba(0, 0, 0, 0.05),
       rgba(255, 255, 255, 0.05));
 }
+
+.bg-light-linear-blue {
+  background: linear-gradient(0deg, rgba(204, 218, 235, 0.19), rgba(204, 218, 235, 0.19)), linear-gradient(210.55deg, rgba(235, 242, 249, 0.7) 19.14%, rgba(198, 215, 235, 0.7) 154.68%);
+}

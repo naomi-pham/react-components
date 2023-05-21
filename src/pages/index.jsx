@@ -16,10 +16,10 @@ export default function Home() {
       </Head>
 
       <main className="flex max-h-screen min-h-screen overflow-y-scroll bg-light-neutral-50 text-branding-secondary-600">
-        <Tab.Group vertical className="flex w-full" as="div">
+        <Tab.Group vertical className="flex w-full gap-16" as="div">
           <Tab.List>
             <motion.div
-              className="h-full min-w-[270px] rounded-r-2xl bg-light-neutral-50 p-1 px-6 py-10 shadow-button-lg"
+              className="bg- h-full min-w-[270px] rounded-r-[40px] bg-light-neutral-50 p-1 px-6 py-10 shadow-2xl"
               initial={{ opacity: 0, translateX: -300 }}
               animate={{ opacity: 1, translateX: 0 }}
               transition={{
@@ -40,7 +40,7 @@ export default function Home() {
                       >
                         <button
                           type="button"
-                          className={`inline-flex w-full gap-2 rounded-full px-4 py-3 text-left text-body-2 font-semibold text-branding-secondary-400 focus:outline-none focus:ring-offset-2 ${
+                          className={`inline-flex w-full gap-2 rounded-full px-4 py-3 text-left text-body-2 font-semibold text-branding-secondary-500 focus:outline-none focus:ring-offset-2 ${
                             selected
                               ? 'border-linear-gradient bg-light-neutral-50 text-light-error-500 shadow-container-inner-md'
                               : ''

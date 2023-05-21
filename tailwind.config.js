@@ -7,10 +7,11 @@ module.exports = {
     colors: {
       branding: {
         secondary: {
+          200: '#E3EDF7',
           400: '#728AB7',
           500: '#596E95',
           600: '#415273',
-          700: '#2B3951',
+          700: '#31456A',
         },
       },
       light: {
@@ -97,6 +98,8 @@ module.exports = {
           '-2.17893px -2.17893px 6.5368px #FFFFFF, 2.17893px 2.17893px 6.5368px rgba(174, 174, 192, 0.4)',
         'button-sm':
           '0px 1px 4px rgba(174, 174, 192, 0.25), 2px 2px 3px rgba(174, 174, 192, 0.25)',
+        'box-sm':
+          '-4px -2px 16px #FFFFFF, 4px 2px 16px rgba(136, 165, 191, 0.48)',
         'border-md':
           '-1px -1px 3px #FFFFFF, 1.5px 1.5px 3px rgba(174, 174, 192, 0.4)',
         ...defaultTheme.boxShadow,
