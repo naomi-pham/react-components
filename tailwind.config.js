@@ -95,6 +95,8 @@ module.exports = {
           'inset -1px -1px 1px rgba(255, 255, 255, 0.7), inset 1px 1px 2px rgba(174, 174, 192, 0.2)',
         'button-lg':
           '-2.17893px -2.17893px 6.5368px #FFFFFF, 2.17893px 2.17893px 6.5368px rgba(174, 174, 192, 0.4)',
+        'button-sm':
+          '0px 1px 4px rgba(174, 174, 192, 0.25), 2px 2px 3px rgba(174, 174, 192, 0.25)',
         'border-md':
           '-1px -1px 3px #FFFFFF, 1.5px 1.5px 3px rgba(174, 174, 192, 0.4)',
         ...defaultTheme.boxShadow,

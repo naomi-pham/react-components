@@ -1,12 +1,18 @@
 import React from 'react'
 import ToggleDayNight from './ToggleDayNight'
+import ToggleNeumorphism from './ToggleNeumorphism'
 
 const ToggleList = () => {
   const list = [
     {
       id: 0,
-      label: 'Day night switcher',
+      label: 'Day night toggle',
       component: <ToggleDayNight />,
+    },
+    {
+      id: 1,
+      label: 'Neumorphism toggle',
+      component: <ToggleNeumorphism />,
     },
   ]
   return (
